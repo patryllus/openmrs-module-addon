@@ -57,6 +57,7 @@
 		<property name="commonReports">
 			<set>
 				<ref bean="kenyaemr.etl.common.report.patientClinicalVisits"/>
+				<ref bean="kenyaemr.etl.common.report.patientOnART"/>
 			</set>
 		</property>
 	</bean>
@@ -71,5 +72,14 @@
 			</set></property>
 	</bean>
 
+	<bean id="kenyaemr.etl.common.report.patientOnART" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+		<property name="targetUuid" value="5ef336f5b-de69-47a2-9d55-71a88a96fb14" />
+		<property name="name" value="Patients On ART Register" />
+		<property name="description" value="A report for Patient On ART" />
+		<property name="apps">
+			<set>
+				<ref bean="kenyaemr.app.reports" />
+			</set></property>
+	</bean>
 
 </beans>
