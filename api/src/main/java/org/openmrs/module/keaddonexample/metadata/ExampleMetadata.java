@@ -27,10 +27,12 @@ public class ExampleMetadata extends AbstractMetadataBundle {
 
 	public static class _EncounterType {
 		public static final String EXAMPLE = "d69dedbd-3933-4e44-8292-bea939ce980a";
+		public static final String SOCIAL_WORK = "4fc436f4-9f3c-4f69-b60f-ad79dd114c47";
 	}
 
 	public static class _Form {
 		public static final String EXAMPLE = "b694b1bc-2086-47dd-a4ad-ba48f9471e4b";
+		public static final String ADULT_SCREENING = "0640058c-aa3f-47d0-867b-3025f2e5f80d";
 	}
 
 	/**
@@ -39,7 +41,9 @@ public class ExampleMetadata extends AbstractMetadataBundle {
 	@Override
 	public void install() {
 		install(encounterType("Example encounter", "Just an example", _EncounterType.EXAMPLE));
+		install(encounterType("Social Work", "Social Work Encounter", _EncounterType.SOCIAL_WORK));
 
 		install(form("Example form", null, _EncounterType.EXAMPLE, "1", _Form.EXAMPLE));
+		install(form("Social Work Adult Screening form", null, _EncounterType.SOCIAL_WORK, "1", _Form.ADULT_SCREENING));
 	}
 }

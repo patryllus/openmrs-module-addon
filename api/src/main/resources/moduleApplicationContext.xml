@@ -14,7 +14,38 @@
 	</bean>
 
 	<!-- Forms -->
+	<!-- Forms config -->
+	<bean id="keaddonexample.config.form" class="org.openmrs.module.kenyacore.form.FormConfiguration">
+		<property name="commonVisitForms">
+			<set>
+				<ref bean="keaddonexample.form.example" />
+				<ref bean="keaddonexample.form.socialworkadultscreening" />
+				<!--<ref bean="keaddonexample.form.socialworkchildscreening" />-->
+				<!--<ref bean="keaddonexample.form.socialworklosttofollowup" />-->
+				<!--<ref bean="keaddonexample.form.socialworkphonecontact" />-->
+				<!--<ref bean="keaddonexample.form.socialworkverbalautopsy" />-->
+				<!--&lt;!&ndash; Nutrition &ndash;&gt;-->
+				<!--<ref bean="keaddonexample.form.nutritionscreening" />-->
+				<!--<ref bean="keaddonexample.form.nutritionfollowup" />-->
+				<!--&lt;!&ndash; Medical follow up &ndash;&gt;-->
+				<!--<ref bean="keaddonexample.form.mfuvisualinspectionaceticacid" />-->
+				<!--<ref bean="keaddonexample.form.mfunurseform" />-->
+				<!--&lt;!&ndash; Counselling&ndash;&gt;-->
+				<!--<ref bean="keaddonexample.form.counsellingadherencecounselling" />-->
+				<!--<ref bean="keaddonexample.form.counsellingchildcounsellingfollowup" />-->
+				<!--<ref bean="keaddonexample.form.counsellingfollowup" />-->
+				<!--<ref bean="keaddonexample.form.counselorscreeningchild" />-->
+				<!--<ref bean="keaddonexample.form.counselorscreeningadult" />-->
+				<!--<ref bean="keaddonexample.form.counsellingchilddisclosurefollowup" />-->
+				<!--<ref bean="keaddonexample.form.counsellingchilddisclosuresession" />-->
+				<!--<ref bean="keaddonexample.form.counselingadherence1" />-->
+				<!--<ref bean="keaddonexample.form.cousellinggeneralsession" />-->
 
+			</set>
+		</property>
+	</bean>
+
+	<!-- Forms addition -->
 	<bean id="keaddonexample.form.example" class="org.openmrs.module.kenyacore.form.FormDescriptor">
 		<property name="targetUuid" value="b694b1bc-2086-47dd-a4ad-ba48f9471e4b" />
 		<property name="apps">
@@ -23,35 +54,25 @@
 				<ref bean="kenyaemr.app.chart" />
 			</set>
 		</property>
-		<property name="icon" value="keaddonexample:forms/example.png" />
-		<property name="htmlform" value="keaddonexample:example.xml" />
+		<property name="icon" value="kenyaui:forms/generic.png" />
+		<property name="htmlform" value="keaddonexample:example.html" />
 	</bean>
+	<!-- Social work Forms -->
 
-	<bean id="keaddonexample.config.form" class="org.openmrs.module.kenyacore.form.FormConfiguration">
-		<!-- Example of adding a form to the general visit form list -->
-		<property name="commonVisitForms">
+	<bean id="keaddonexample.form.socialworkadultscreening" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+		<property name="targetUuid" value="0640058c-aa3f-47d0-867b-3025f2e5f80d" />
+		<property name="apps">
 			<set>
-				<ref bean="keaddonexample.form.example" />
-
+				<ref bean="kenyaemr.app.clinician" />
+				<ref bean="kenyaemr.app.chart" />
 			</set>
 		</property>
-
-		<!-- Example of adding a form to the HIV program visit form list -->
-		<!--<property name="programVisitForms">
-			<map>
-				<entry key-ref="kenyaemr.program.hiv">
-					<set><ref bean="keaddonexample.form.example" /></set>
-				</entry>
-			</map>
-		</property>-->
-
-		<!-- Example of disabling an existing form. This form will no longer appear in the "Available Forms" list -->
-		<property name="disabledForms">
-			<set>
-				<ref bean="kenyaemr.common.form.progressNote" />
-			</set>
-		</property>
+		<property name="icon" value="kenyaui:forms/generic.png" />
+		<property name="htmlform" value="keaddonexample:socialworkadultscreening.html" />
 	</bean>
+
+
+	<!-- Reports -->
 
 	<bean id="kenyaemr.config.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
 		<property name="commonReports">
