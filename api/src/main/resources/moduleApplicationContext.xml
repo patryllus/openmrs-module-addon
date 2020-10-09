@@ -68,6 +68,7 @@
 			</set>
 		</property>
 		<property name="icon" value="kenyaui:forms/generic.png" />
+		<property name="showIfCalculation" value="org.openmrs.module.keaddonexample.calculation.EligibleForAdultSocialWorkScreeningCalculation" />
 		<property name="htmlform" value="keaddonexample:socialworkadultscreening.html" />
 	</bean>
 
