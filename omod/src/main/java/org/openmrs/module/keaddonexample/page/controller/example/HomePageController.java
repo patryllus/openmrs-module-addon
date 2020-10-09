@@ -22,7 +22,7 @@ import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Home page controller
+ * Home pages controller
  */
 @AppPage(ExampleConstants.APP_EXAMPLE)
 public class HomePageController {

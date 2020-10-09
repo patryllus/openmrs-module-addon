@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 /**
- * Patient Profile page controller
+ * Patient Profile pages controller
  */
 @AppPage(ExampleConstants.APP_EXAMPLE)
 public class PatientProfilePageController {

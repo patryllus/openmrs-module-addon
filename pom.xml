@@ -31,10 +31,11 @@
 		<!-- Module dependencies -->
 		<appframeworkVersion>2.1</appframeworkVersion>
 		<calculationVersion>1.0</calculationVersion>
-		<htmlformentryVersion>2.2.1</htmlformentryVersion>
+		<htmlformentryVersion>2.3</htmlformentryVersion>
+		<htmlwidgetsVersion>1.6.6</htmlwidgetsVersion>
 		<idgenVersion>2.6</idgenVersion>
 		<kenyacoreVersion>2.4.1</kenyacoreVersion>
-		<kenyaemrVersion>17.2.0</kenyaemrVersion>
+		<kenyaemrVersion>17.2.1</kenyaemrVersion>
 		<kenyauiVersion>2.1.2</kenyauiVersion>
 		<metadatadeployVersion>1.3</metadatadeployVersion>
 		<metadatamappingVersion>1.0.1</metadatamappingVersion>
@@ -53,6 +54,13 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>kenyaemr-api</artifactId>
+				<version>${kenyaemrVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>kenyaemr-omod</artifactId>
 				<version>${kenyaemrVersion}</version>
 				<scope>provided</scope>
 			</dependency>
@@ -87,8 +95,15 @@
 
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
-				<artifactId>htmlformentry-omod</artifactId>
+				<artifactId>htmlformentry-api</artifactId>
 				<version>${htmlformentryVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>htmlwidgets-api</artifactId>
+				<version>${htmlwidgetsVersion}</version>
 				<scope>provided</scope>
 			</dependency>
 
